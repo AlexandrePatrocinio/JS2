@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+		<link rel="stylesheet" type="text/css" href="Space.css" />
+		<title>JavaScript Space System</title>
+
+        <script src="JS3.js" type="text/javascript"></script>
+		<script type="text/javascript">	    
+		    var center;
+			function init() {
+			    center = document.getElementById("Sol");
+			    var Terra = document.getElementById("Terra");
+				var Lua = document.getElementById("Lua");
+				var Marte = document.getElementById("Marte");
+				var img3 = document.getElementById("img3");
+				var img4 = document.getElementById("img4");
+
+				var spacesystem = new JS3.spaceSystem(center, screen.width, false, 10);
+				
+				var point0 = new JS3.Graphics.point(0, 0, 0);
+
+				center.style.left = (point0.convertLT().x - (center.offsetWidth / 2)) + 'px';
+				center.style.top = (point0.convertLT().y - (center.offsetHeight / 2)) + 'px';
+				center.style.zIndex = point0.convertLT().z;
+
+				center.registerOrbitalObject(Terra);
+				Terra.setRadius(300);
+				Terra.zx = 0;
+				Terra.zy = 70;
+				Terra.s = 50;
+				Terra.registerOrbitalObject(Lua);
+				Lua.setRadius(25);
+				Lua.zx = 0;
+				Lua.zy = 90;
+				Lua.s = 150;
+				center.registerOrbitalObject(Marte);
+				Marte.setRadius(500);
+				Marte.zx = 0;
+				Marte.zy = 110;
+				Marte.s = 10;
+
+				spacesystem.showOrbit = false;
+
+				currentSpaceSystem.turnon();
+				currentSpaceSystem.pause  = true;
+			}
+		</script>
+	</head>
+	<body onload="init()">
+        <img id="Sol" src="sol.png" style="width: 100px; height: 103px; border-width: 0px;" />
+		<img id="Terra" src="planetaterra.png" style="width:15px; height: 15px; border-width: 0px;" />
+		<img id="Lua" src="lua.jpg" style="width:8px; height: 8px; border-width: 0px;" />		
+		<img id="Marte" src="Marte.png" style="width:20px; height: 24px; border-width: 0px;" />
+	</body>
+</html>
