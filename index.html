@@ -13,8 +13,7 @@
 			    var Terra = document.getElementById("Terra");
 				var Lua = document.getElementById("Lua");
 				var Marte = document.getElementById("Marte");
-				var img3 = document.getElementById("img3");
-				var img4 = document.getElementById("img4");
+				var Jupiter = document.getElementById("Jupiter");
 
 				var spacesystem = new JS3.spaceSystem(center, screen.width, false, 10);
 				
@@ -38,8 +37,13 @@
 				Marte.setRadius(500);
 				Marte.zx = 0;
 				Marte.zy = 110;
-				Marte.s = 10;
-
+				Marte.s = 25;
+				center.registerOrbitalObject(Jupiter);
+				Jupiter.setRadius(700);
+				Jupiter.zx = 15;
+				Jupiter.zy = 0;
+				Jupiter.s = 10;
+				
 				spacesystem.showOrbit = false;
 
 				currentSpaceSystem.turnon();
@@ -49,8 +53,9 @@
 	</head>
 	<body onload="init()">
         <img id="Sol" src="sol.png" style="width: 100px; height: 103px; border-width: 0px;" />
-		<img id="Terra" src="planetaterra.png" style="width:15px; height: 15px; border-width: 0px;" />
+		<img id="Terra" src="Terra.png" style="width:15px; height: 15px; border-width: 0px;" />
 		<img id="Lua" src="lua.jpg" style="width:8px; height: 8px; border-width: 0px;" />		
-		<img id="Marte" src="Marte.png" style="width:20px; height: 24px; border-width: 0px;" />
+		<img id="Marte" src="Marte.png" style="width:10px; height: 10px; border-width: 0px;" />
+		<img id="Jupiter" src="Jupiter.png" style="width:30px; height: 30px; border-width: 0px;" />
 	</body>
 </html>
