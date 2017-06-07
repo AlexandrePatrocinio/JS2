@@ -1,0 +1,104 @@
+html
+{
+	margin: 0px 0px 0px 0px;	
+	text-align: center;
+	vertical-align: top;
+	width:100%;
+	height:100%;
+	background-color: Black;
+}
+
+body,form
+{
+	margin: inherit;
+	width: inherit;
+	height: inherit;
+}
+
+input
+{
+  color: White;
+  border-left: solid 2px Green;
+  border-top: solid 2px Green;
+  border-right: solid 1px #66FF33;
+  border-bottom: solid 1px #66FF33;	
+  background-color: Background;
+  margin: 5px 5px 5px 5px;
+}
+
+div.Main
+{
+	margin: inherit;
+	width: inherit;
+	height: inherit;
+}
+
+div.PanelControl
+{
+	width: 98%;
+	text-align: left; 
+	padding: 0; 
+	vertical-align: top;
+	margin-top: 5px;
+	margin-left: 5px;
+	border-left: solid 2px Green;
+	border-top: solid 2px Green;
+	border-right: solid 1px #66FF33;
+	border-bottom: solid 1px #66FF33;
+}
+
+div.minimenu
+{
+	position: absolute;
+	width: 75px;
+    height: 65px;
+    visibility: hidden;
+}
+
+a.minimenu
+{
+	margin-top: 0px;
+	position: static; 
+	width: 90px;
+	height: 14px;
+	font: bold 12px/12px arial, helvetica, sans-serif;		    
+	display: block;
+	text-align: left; 
+	padding: 3px;
+	margin-bottom:1px; 
+	text-decoration: none;
+	color: #ffcc99;	
+	background-color: #302011;	
+}
+
+a.minimenu:hover 
+{
+	color: #302011;
+	width: 90px;
+	font: bold 12px/12px arial, helvetica, sans-serif;
+	background-color: #ffcc99;
+}
+
+div.gate 
+{
+	text-align: left; 
+	padding: 10px 10px 10px 10px; 
+	vertical-align: top;
+	border-left: solid 2px #66FF33;
+	border-top: solid 2px #66FF33;
+	border-right: solid 1px Green;
+	border-bottom: solid 1px Green;
+	width: 530px;
+	height:300px;
+	background-color: Green;
+    border-radius:15px;
+    -moz-border-radius:15px;
+	/*box-shadow: 10px 10px 5px #888888;*/
+}
+
+iframe.gate
+{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
