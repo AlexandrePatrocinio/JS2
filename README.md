@@ -112,3 +112,5 @@ currentSpaceSystem.pause = true; // Para pausar inicialmente
 ## Exemplo Completo
 
 Veja o exemplo em index.html para uma implementação funcional.
+
+![Gravando 2025-09-29 105118](https://github.com/user-attachments/assets/2eca49ea-e822-49d4-bea6-a8c344eaaded)
