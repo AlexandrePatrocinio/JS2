@@ -1,4 +1,4 @@
-JS3 = {
+JS2 = {
     ///	<summary>
 	/// 	JavaScript Space System
     ///		Name space para as classes que controlam o espaço
@@ -6,7 +6,7 @@ JS3 = {
     ///	</summary>	
 }
 
-JS3.defaultObject = function () {
+JS2.defaultObject = function () {
     ///	<summary>
 	/// 	Classe padrão da qual todos os objects do framework irão herdar
     ///		Assim teremos algums métodos básicos uteis a quaisquer objetos
@@ -33,20 +33,20 @@ JS3.defaultObject = function () {
     }
 }
 
-JS3.Graphics = {
+JS2.Graphics = {
     ///	<summary>
     ///		Sub name space para as classes graficas /!\ Por enquanto só preciso de uma...
     ///	</summary>	
 }
 
-JS3.Graphics.point = function (x, y, z) {
+JS2.Graphics.point = function (x, y, z) {
     ///	<summary>
 	/// 	Classe para abstração do conceito matemático de "ponto" dentro das cordenadas cartesianas
     ///		e converte o valor relativo das cordenadas do ponto para o valor real, left e top, da tela.
     ///	</summary>
 	
-    //Simulando a "herança" no javascript. Herda da classe padrão JS3.defaultObject
-    JS3.defaultObject.call(this);
+    //Simulando a "herança" no javascript. Herda da classe padrão JS2.defaultObject
+    JS2.defaultObject.call(this);
 
     this.left0 = screen.width / 2;
     this.top0 = screen.height / 2;
@@ -55,7 +55,7 @@ JS3.Graphics.point = function (x, y, z) {
     this.y = (y == null ? 0 : parseInt(y));
     this.z = (z == null ? 0 : parseInt(z));
     this.convertLT = function () {
-        var p1 = new JS3.Graphics.point();
+        var p1 = new JS2.Graphics.point();
         p1.x = parseInt(this.left0) + parseInt(this.x);
         p1.y = parseInt(this.top0) - parseInt(this.y);
         p1.z = parseInt(this.zIndex0) + parseInt(this.z);
@@ -63,7 +63,7 @@ JS3.Graphics.point = function (x, y, z) {
     }
 }
 
-JS3.Graphics.fadeTo = function (el, from, to, steps, curr) {
+JS2.Graphics.fadeTo = function (el, from, to, steps, curr) {
     var to = to;
     var stps = steps || 5;
     var from = from || (to / stps);
@@ -73,11 +73,11 @@ JS3.Graphics.fadeTo = function (el, from, to, steps, curr) {
     el.style.opacity = Number(curr / 100);
     el.style.filter = 'alpha(opacity=' + Number(curr) + ')';
     if (Math.round(curr) != to) {
-        setTimeout(function () { JS3.Graphics.fadeTo(el, from, to, steps, curr); }, 100);
+        setTimeout(function () { JS2.Graphics.fadeTo(el, from, to, steps, curr); }, 100);
     }
 }
 
-JS3.spaceSystem = function (centralObject, zaxlelength, showOrbits, maxZomm) {
+JS2.spaceSystem = function (centralObject, zaxlelength, showOrbits, maxZomm) {
     ///	<summary>
     ///		Classe responsável pelo gerênciamento dos objetos no espaço
     ///	</summary>
@@ -94,8 +94,8 @@ JS3.spaceSystem = function (centralObject, zaxlelength, showOrbits, maxZomm) {
     ///		Variação máxima de zomm. O valor padrão é 10(10 vezes o tamanho do objeto);
     ///	</param>
 	
-    //Simulando a "herança" no javascript. Herda da classe padrão JS3.defaultObject
-    JS3.defaultObject.call(this);
+    //Simulando a "herança" no javascript. Herda da classe padrão JS2.defaultObject
+    JS2.defaultObject.call(this);
 
     window['currentSpaceSystem'] = this;
 
@@ -105,7 +105,7 @@ JS3.spaceSystem = function (centralObject, zaxlelength, showOrbits, maxZomm) {
 
     this.maxZomm = (maxZomm ? maxZomm : 10);
 	
-    this.point = JS3.Graphics.point;	
+    this.point = JS2.Graphics.point;	
 
     this.initProperties = function (obj) {
         if (obj.InitSSProperties === undefined || obj.InitSSProperties == null) {
@@ -184,9 +184,9 @@ JS3.spaceSystem = function (centralObject, zaxlelength, showOrbits, maxZomm) {
         //Os objetos que passarem do limite máximo do espaço sumirão do angulo de visão;
         if (parseInt(obj.style.zIndex) > currentSpaceSystem.maxzIndex) {
             var to = (100 - (parseInt(obj.style.zIndex) - currentSpaceSystem.maxzIndex) < 0 ? 0 : 100 - (parseInt(obj.style.zIndex) - currentSpaceSystem.maxzIndex));
-            JS3.Graphics.fadeTo(obj, 100, to, 1);
+            JS2.Graphics.fadeTo(obj, 100, to, 1);
         }
-        else JS3.Graphics.fadeTo(obj, 100, 100, 1);
+        else JS2.Graphics.fadeTo(obj, 100, 100, 1);
     }
 
     this.turn = function (Centralobj, onmove) {

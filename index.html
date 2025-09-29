@@ -5,7 +5,7 @@
 		<link rel="stylesheet" type="text/css" href="css/Space.css" />
 		<title>JavaScript Space System</title>
 
-        <script src="srcs/JS3.js" type="text/javascript"></script>
+        <script src="srcs/JS2.js" type="text/javascript"></script>
 		<script type="text/javascript">	    
 		    var center;
 			function init() {
@@ -15,33 +15,33 @@
 				var Marte = document.getElementById("Marte");
 				var Jupiter = document.getElementById("Jupiter");
 
-				var spacesystem = new JS3.spaceSystem(center, screen.width, false, 10);
+				var spacesystem = new JS2.spaceSystem(center, screen.width, false, 10);
 				
-				var point0 = new JS3.Graphics.point(0, 0, 0);
+				var point0 = new JS2.Graphics.point(0, 0, 0);
 
 				center.style.left = (point0.convertLT().x - (center.offsetWidth / 2)) + 'px';
 				center.style.top = (point0.convertLT().y - (center.offsetHeight / 2)) + 'px';
 				center.style.zIndex = point0.convertLT().z;
 
 				center.registerOrbitalObject(Terra);
-				Terra.setRadius(300);
+				Terra.setRadius(200);
 				Terra.zx = 0;
-				Terra.zy = 70;
+				Terra.zy = 110;
 				Terra.s = 50;
 				Terra.registerOrbitalObject(Lua);
-				Lua.setRadius(25);
+				Lua.setRadius(15);
 				Lua.zx = 0;
-				Lua.zy = 90;
+				Lua.zy = 110;
 				Lua.s = 150;
 				center.registerOrbitalObject(Marte);
-				Marte.setRadius(500);
+				Marte.setRadius(300);
 				Marte.zx = 0;
 				Marte.zy = 110;
 				Marte.s = 25;
 				center.registerOrbitalObject(Jupiter);
 				Jupiter.setRadius(700);
-				Jupiter.zx = 15;
-				Jupiter.zy = 0;
+				Jupiter.zx = 0;
+				Jupiter.zy = 110;
 				Jupiter.s = 10;
 				
 				spacesystem.showOrbit = false;
@@ -52,10 +52,10 @@
 		</script>
 	</head>
 	<body onload="init()">
-        <img id="Sol" src="imgs/sol.png" style="width: 100px; height: 103px; border-width: 0px;" />
+        <img id="Sol" src="imgs/Sol.png" style="width: 100px; height: 103px; border-width: 0px;" />
 		<img id="Terra" src="imgs/Terra.png" style="width:15px; height: 15px; border-width: 0px;" />
-		<img id="Lua" src="imgs/lua.jpg" style="width:8px; height: 8px; border-width: 0px;" />		
-		<img id="Marte" src="imgs/Marte.png" style="width:10px; height: 10px; border-width: 0px;" />
+		<img id="Lua" src="imgs/Lua.jpg" style="width:8px; height: 8px; border-width: 0px;" />		
+		<img id="Marte" src="imgs/Marte.png" style="width:13px; height: 13px; border-width: 0px;" />
 		<img id="Jupiter" src="imgs/Jupiter.png" style="width:30px; height: 30px; border-width: 0px;" />
 	</body>
 </html>
