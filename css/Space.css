@@ -5,7 +5,44 @@ html
 	vertical-align: top;
 	width:100%;
 	height:100%;
-	background-color: Black;
+	/* Fundo do espaço condensado ao centro, simulando céu noturno visto do deserto */
+    background:
+        /* Faixa enevoada da Via Láctea centralizada */
+        radial-gradient(ellipse 60% 25% at 50% 60%, rgba(255,255,255,0.13) 0%, rgba(200,200,255,0.22) 35%, rgba(80,80,120,0.10) 70%, transparent 100%),
+        /* Nebulosidade azulada ao redor da faixa */
+        radial-gradient(ellipse 40% 15% at 50% 62%, rgba(80,120,200,0.10) 0%, transparent 100%),
+        /* Estrelas brilhantes centralizadas */
+        radial-gradient(circle at 36% 58%, #fff 0.4px, transparent 3px),
+		radial-gradient(circle at 41% 62%, #fff 0.5px, transparent 2px),
+        radial-gradient(circle at 60% 65%, #fff 0.2px, transparent 2px),
+        radial-gradient(circle at 95% 63%, #fff 0.1px, transparent 2.5px),
+		radial-gradient(circle at 72% 54%, #fff 1.2px, transparent 2px),
+		radial-gradient(circle at 82% 74%, #fff 0.4px, transparent 2px),
+		radial-gradient(circle at 92% 14%, #fff 0.2px, transparent 2px),
+		radial-gradient(circle at 12% 35%, #fff 0.2px, transparent 2px),
+		radial-gradient(circle at 24% 88%, #fff 0.3px, transparent 2px),
+		radial-gradient(circle at 5% 94%, #fff 0.4px, transparent 2px),
+		radial-gradient(circle at 52% 35%, #fff 0.1px, transparent 2px),
+		radial-gradient(circle at 58% 15%, #fff 0.2px, transparent 2px),
+		radial-gradient(circle at 44% 8%, #fff 0.3px, transparent 2px),
+		radial-gradient(circle at 32% 22%, #fff 0.4px, transparent 2px),		
+        /* ... repita padrões variando as posições para simular muitas estrelas ... */
+        /* Exemplos de estrelas espalhadas */
+        radial-gradient(circle at 10% 10%, #fff 1px, transparent 2px),
+        radial-gradient(circle at 20% 80%, #fff 1.2px, transparent 2px),
+        radial-gradient(circle at 80% 20%, #fff 1.2px, transparent 2px),
+        radial-gradient(circle at 90% 90%, #fff 1px, transparent 2px),
+        radial-gradient(circle at 15% 60%, #fff 1.2px, transparent 2px),
+        radial-gradient(circle at 70% 40%, #fff 1.2px, transparent 2px),
+        radial-gradient(circle at 60% 85%, #fff 1.2px, transparent 2px),
+        radial-gradient(circle at 30% 70%, #fff 1.2px, transparent 2px),
+        radial-gradient(circle at 75% 15%, #fff 1.2px, transparent 2px),
+        radial-gradient(circle at 25% 35%, #fff 1.2px, transparent 2px),
+        /* ...adicione mais linhas para aumentar a quantidade de estrelas... */
+        /* Fundo preto */
+        #000;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
 }
 
 body,form
@@ -13,92 +50,4 @@ body,form
 	margin: inherit;
 	width: inherit;
 	height: inherit;
-}
-
-input
-{
-  color: White;
-  border-left: solid 2px Green;
-  border-top: solid 2px Green;
-  border-right: solid 1px #66FF33;
-  border-bottom: solid 1px #66FF33;	
-  background-color: Background;
-  margin: 5px 5px 5px 5px;
-}
-
-div.Main
-{
-	margin: inherit;
-	width: inherit;
-	height: inherit;
-}
-
-div.PanelControl
-{
-	width: 98%;
-	text-align: left; 
-	padding: 0; 
-	vertical-align: top;
-	margin-top: 5px;
-	margin-left: 5px;
-	border-left: solid 2px Green;
-	border-top: solid 2px Green;
-	border-right: solid 1px #66FF33;
-	border-bottom: solid 1px #66FF33;
-}
-
-div.minimenu
-{
-	position: absolute;
-	width: 75px;
-    height: 65px;
-    visibility: hidden;
-}
-
-a.minimenu
-{
-	margin-top: 0px;
-	position: static; 
-	width: 90px;
-	height: 14px;
-	font: bold 12px/12px arial, helvetica, sans-serif;		    
-	display: block;
-	text-align: left; 
-	padding: 3px;
-	margin-bottom:1px; 
-	text-decoration: none;
-	color: #ffcc99;	
-	background-color: #302011;	
-}
-
-a.minimenu:hover 
-{
-	color: #302011;
-	width: 90px;
-	font: bold 12px/12px arial, helvetica, sans-serif;
-	background-color: #ffcc99;
-}
-
-div.gate 
-{
-	text-align: left; 
-	padding: 10px 10px 10px 10px; 
-	vertical-align: top;
-	border-left: solid 2px #66FF33;
-	border-top: solid 2px #66FF33;
-	border-right: solid 1px Green;
-	border-bottom: solid 1px Green;
-	width: 530px;
-	height:300px;
-	background-color: Green;
-    border-radius:15px;
-    -moz-border-radius:15px;
-	/*box-shadow: 10px 10px 5px #888888;*/
-}
-
-iframe.gate
-{
-    background-color: white;
-    width: 100%;
-    height: 100%;
 }
