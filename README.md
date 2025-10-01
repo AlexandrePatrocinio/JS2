@@ -45,10 +45,10 @@ var Marte = document.getElementById("Marte");
 var Jupiter = document.getElementById("Jupiter");
 
 // Cria o sistema espacial
-var spacesystem = new JS3.spaceSystem(center, screen.width, false, 10);
+var spacesystem = new JS2.spaceSystem(center, screen.width, false, 10);
 
 // Centraliza o objeto principal
-var point0 = new JS3.Graphics.point(0, 0, 0);
+var point0 = new JS2.Graphics.point(0, 0, 0);
 center.style.left = (point0.convertLT().x - (center.offsetWidth / 2)) + 'px';
 center.style.top = (point0.convertLT().y - (center.offsetHeight / 2)) + 'px';
 center.style.zIndex = point0.convertLT().z;
@@ -95,8 +95,8 @@ currentSpaceSystem.pause = true; // Para pausar inicialmente
 
 ## Principais Classes e Métodos
 
-- JS3.spaceSystem: Gerencia o sistema espacial e as órbitas.
-- JS3.Graphics.point: Representa um ponto no espaço cartesiano.
+- JS2.spaceSystem: Gerencia o sistema espacial e as órbitas.
+- JS2.Graphics.point: Representa um ponto no espaço cartesiano.
 - registerOrbitalObject(obj): Adiciona um objeto em órbita.
 - setRadius(r): Define o raio da órbita.
 - turnon(): Inicia a animação.
@@ -107,7 +107,7 @@ currentSpaceSystem.pause = true; // Para pausar inicialmente
 - Por ser ECMA5, não utiliza recursos modernos como class, let, const ou - arrow functions.
 - O sistema depende de elementos HTML posicionados com position: absolute.
 - O zoom pode ser controlado via scroll do mouse.
-- Para mais detalhes, consulte os comentários no arquivo srcs/JS3.js.
+- Para mais detalhes, consulte os comentários no arquivo srcs/JS2.js.
 
 ## Exemplo Completo
 
